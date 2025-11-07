@@ -1,34 +1,73 @@
-<p>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Резюме</title>
-    </head>
-    
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме</title>
+    <style>
+        /* Basic styles for light theme (default) */
+        body {
+            background-color: white;
+            color: black;
+            transition: background-color 0.5s, color 0.5s;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Dark theme styles (will be applied when the 'dark-theme' class is added) */
+        .dark-theme {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Just to make the button text clearer against a dark background */
+        .dark-theme #theme-toggle-btn {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
     <header>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkE7S7ZP3pae9-XDZlfX_HjWKP519_agIeoQ&s" alt="ntew image">
-    <p>Богдан Зарва</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkE7S7ZP3pae9-XDZlfX_HjWKP519_agIeoQ&s" alt="ntew image">
+        <p>Богдан Зарва</p>
         <P>СТУДЕНТ</P>
     </header>
     <main>
         <h2>Контакта Информация</h2>
+        <button id="theme-toggle-btn">Змінити тему</button>
         <h3>
-            <Li>
+            <li>
                 +380669994321
-            </Li>
+            </li>
         </h3>
         <h3>
-            <Li>
+            <li>
                 example@gmail.com
-            </Li>
+            </li>
         </h3>
         <section>Запорізький Електротехнічний фаховий Колледж</section>
     </main>
     <footer>
     </footer>
-    </body>
-    </html>
-</p>
+
+    <script>
+        // Get the button element by its ID
+        const themeButton = document.getElementById('theme-toggle-btn');
+        // Get the body element
+        const bodyElement = document.body;
+
+        // Add an event listener to the button
+        themeButton.addEventListener('click', function() {
+            // Toggle the 'dark-theme' class on the body element
+            bodyElement.classList.toggle('dark-theme');
+
+            // Optional: Change the button text based on the current theme
+            if (bodyElement.classList.contains('dark-theme')) {
+                themeButton.textContent = 'Змінити на світлу тему';
+            } else {
+                themeButton.textContent = 'Змінити на темну тему';
+            }
+        });
+    </script>
+</body>
+</html>
