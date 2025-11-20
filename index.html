@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Резюме - Богдан Зарва</title>
     <style>
-        /* Базові стилі для світлої теми (за замовчуванням) */
         body {
-            background-color: #f4f4f4; /* Дуже світло-сірий */
-            color: #333; /* Темний текст */
+            background-color: #f4f4f4; 
+            color: #333; 
             transition: background-color 0.5s, color 0.5s;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 20px;
         }
 
-        /* Стилі для резюме-контейнера */
+
         .resume-container {
             max-width: 800px;
             margin: 40px auto;
@@ -25,19 +24,19 @@
             border-radius: 8px;
         }
 
-        /* Стилі для темної теми */
+
         .dark-theme {
-            background-color: #2c2c2c; /* Темно-сірий фон сторінки */
+            background-color: #2c2c2c;
             color: #f4f4f4;
         }
         
-        /* Темна тема для контейнера */
+
         .dark-theme .resume-container {
-            background-color: #3e3e3e; /* Трохи світліший сірий для контейнера */
+            background-color: #3e3e3e; 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
-        /* Стилі заголовка */
+
         header {
             text-align: center;
             padding-bottom: 20px;
@@ -52,7 +51,7 @@
         header img {
             width: 100px;
             height: 100px;
-            border-radius: 50%; /* Кругле зображення */
+            border-radius: 50%; 
             object-fit: cover;
             margin-bottom: 10px;
         }
@@ -73,12 +72,12 @@
             color: #bbb;
         }
 
-        /* Стилі для секцій */
+
         h2 {
             border-bottom: 1px solid #ddd;
             padding-bottom: 5px;
             margin-top: 25px;
-            color: #007bff; /* Акцентний колір */
+            color: #007bff;
         }
         
         .dark-theme h2 {
@@ -86,9 +85,8 @@
             color: #4da6ff;
         }
         
-        /* Стилі для списку контактів */
         ul {
-            list-style: none; /* Прибираємо стандартні маркери */
+            list-style: none;
             padding-left: 0;
         }
 
@@ -99,7 +97,7 @@
         }
         
         ul li::before {
-            content: '•'; /* Використовуємо кастомний маркер */
+            content: '•';
             color: #007bff;
             font-weight: bold;
             display: inline-block;
@@ -121,7 +119,7 @@
             color: white;
             font-size: 1em;
             transition: background-color 0.3s, opacity 0.3s;
-            display: block; /* Робимо кнопку блочним елементом для вирівнювання */
+            display: block;
             margin: 15px 0;
         }
 
@@ -169,16 +167,12 @@
     </div>
 
     <script>
-        // Отримання елементів
         const themeButton = document.getElementById('theme-toggle-btn');
         const bodyElement = document.body;
 
-        // Додавання обробника події
         themeButton.addEventListener('click', function() {
-            // Перемикання класу 'dark-theme' на елементі body
             bodyElement.classList.toggle('dark-theme');
 
-            // Зміна тексту кнопки
             if (bodyElement.classList.contains('dark-theme')) {
                 themeButton.textContent = 'Змінити на світлу тему';
             } else {
